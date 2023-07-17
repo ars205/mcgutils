@@ -1,8 +1,0 @@
-LICENSE
-setup.py
-mcgosmhelpernxx.egg-info/PKG-INFO
-mcgosmhelpernxx.egg-info/SOURCES.txt
-mcgosmhelpernxx.egg-info/dependency_links.txt
-mcgosmhelpernxx.egg-info/entry_points.txt
-mcgosmhelpernxx.egg-info/requires.txt
-mcgosmhelpernxx.egg-info/top_level.txt
