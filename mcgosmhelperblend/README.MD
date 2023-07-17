@@ -22,16 +22,11 @@
 
 ## Installation
 
-1. Clone the repository or download the source code from [GitHub](https://github.com/ars205/mcg-tools/mcgosmhelperblend).
+1. Ensure you have Blender installed on your system.
+2. Download this repository to your local system.
+3. Move the Python script file (`mcgosmhelperblend.py`) to your desired directory.
+4. Check the requirements and install the necessary packages.
 
-2. Navigate to the package directory:
-   ```bash
-   cd mcgosmhelperblend
-   ```
-3. Install the package and its dependencies using pip in development mode:
-    ```bash
-    pip install -e .
-    ```
 
 ## Usage
 
