@@ -1,0 +1,15 @@
+__pycache__
+*.py[cod]
+/mcgosmhelper/__pycache__
+/mcgosmhelper/*.py[cod]
+/mcgosmhelper/*/__pycache__
+/mcgosmhelper/build
+/mcgosmhelper/dist
+/mcgosmhelper/*.egg-info
+/mcgosmhelper/.eggs
+/mcgosmhelper/.tox
+/mcgosmhelper/.pytest_cache
+/mcgosmhelper/.coverage
+/mcgosmhelper/.mypy_cache
+/mcgosmhelper/.vscode
+/mcgosmhelper/.idea
