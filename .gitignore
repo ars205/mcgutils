@@ -1,7 +1,7 @@
 __pycache__
 *.py[cod]
 /mcgosmhelper/__pycache__
-/mcgosmhelper/*.py[cod]
+/mcgosmhelper/*.py[cod]`
 /mcgosmhelper/*/__pycache__
 /mcgosmhelper/build
 /mcgosmhelper/dist
