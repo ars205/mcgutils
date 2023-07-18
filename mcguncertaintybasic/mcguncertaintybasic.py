@@ -9,7 +9,7 @@ bl_info = {
     "warning": "",
     "wiki_url": "www.artansaliu.com",
     "tracker_url": "https://mcg-deep-wrt.netlify.app/deep-wrt/utilities/",
-    "support": "MCG-Artna Salihu",
+    "support": "MCG-Artan Salihu",
 }
 
 import bpy
