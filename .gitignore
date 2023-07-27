@@ -4,6 +4,8 @@
 *.dll
 *.so
 *.dylib
+*.pyd
+*.zip
 
 __pycache__/
 *.egg-info/
