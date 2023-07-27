@@ -28,7 +28,7 @@ description: This script automates the creation of a Wireless InSite study area 
                     --help_options: Print options
 
                 Example for CLI:
-                    python MCGRemcom.py --studyArea 03_Automate_WIS.Study_Zero.xml --setup 03_Automate_WIS.setup --wibatchLocation "C:\Program Files\Remcom\Wireless InSite 3.3.5\bin\calc\wibatch.exe" --licenseLocation 1711@1.1.2.3 --baseVersion 3.3.3.5 ---RISPatternRX ["RISPatternRX_1", "RISPatternRX_2", "RISPatternRX_3"] --RISPatternTX ["RISPatternTX_1", "RISPatternTX_2", "RISPatternTX_3"] --help_options
+                    python MCGRemcom.py --studyArea 03_Automate_WIS.Study_Zero.xml --setup 03_Automate_WIS.setup --wibatchLocation "C:\Program Files\Remcom\Wireless InSite 3.3.5\bin\calc\wibatch.exe" --licenseLocation 111@1.1.2.3 --baseVersion 3.3.3.5 ---RISPatternRX ["RISPatternRX_1", "RISPatternRX_2", "RISPatternRX_3"] --RISPatternTX ["RISPatternTX_1", "RISPatternTX_2", "RISPatternTX_3"] --help_options
 '''
 import re
 import xml.etree.ElementTree as ET
@@ -109,7 +109,7 @@ if __name__ == "__main__":
     parser.add_argument('--studyArea', default="RIS_Remcom_Le.RIS_Remcom_Le_Zero.xml", help='Study area XML file (only valid for X3D model)')
     parser.add_argument('--setup', default="RIS_Remcom_Le.setup", help='Setup file name')
     parser.add_argument('--wibatchLocation', default=r"C:\Program Files\Remcom\Wireless InSite 3.3.5\bin\calc\wibatch.exe",help='Location of wibatch.exe')
-    parser.add_argument('--licenseLocation', default=r"1711@128.131.66.242", help='License location')
+    parser.add_argument('--licenseLocation', default=r"111@1.2.3.4", help='License location')
     parser.add_argument('--baseVersion', default="3.3.5.6", help='Base version of WI')
     parser.add_argument('--TxRxSet', default="ArcSet", help='TxRxSet can be PointSet, ArcSet, or GridSet, None, etc.')
     parser.add_argument('--AntennaType', default="HalfWaveDipole", help='AntennaType can be LinearDipole, UserDefined, HalfWaveDipole, etc.')
