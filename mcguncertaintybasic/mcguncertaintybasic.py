@@ -1,10 +1,10 @@
 bl_info = {
     "name": "MCG Uncertainty",
     "author": "Arta Salihu",
-    "version": (1, 0),
+    "version": (1, 1),
     "blender": (3, 0, 0),
     "location": "View3D > Sidebar > MCG Uncertainty",
-    "description": "A basic version of uncertainty Model in paper Attendion-Aided CSI Wireless Locazation",
+    "description": "A basic version of uncertainty Model in paper Attendion-Aided CSI Wireless Locazation. Cite the paper if useful to you in anyway, please! Contact artan.salihu@tuwien.ac.at (https://www.artansalihu.com/)",
     "warning": "",
     "wiki_url": "",
     "category": "Object",
