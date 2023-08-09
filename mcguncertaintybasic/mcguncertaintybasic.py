@@ -1,15 +1,13 @@
 bl_info = {
-    "name": "MCG Uncertainty Basic",
-    "category": "Object",
-    "location": "View3D > Sidebar > MCG Uncertainty Basic",
-    "author": "MCG-Artan Salihu",
+    "name": "MCG Uncertainty",
+    "author": "Arta Salihu",
     "version": (1, 0),
-    "blender": (2, 80, 0),
-    "description": "Uncertainty Model in paper https://arxiv.org/pdf/2203.10506.pdf",
+    "blender": (3, 0, 0),
+    "location": "View3D > Sidebar > MCG Uncertainty",
+    "description": "A basic version of uncertainty Model in paper Attendion-Aided CSI Wireless Locazation",
     "warning": "",
-    "wiki_url": "www.artansaliu.com",
-    "tracker_url": "https://mcg-deep-wrt.netlify.app/deep-wrt/utilities/",
-    "support": "MCG-Artan Salihu",
+    "wiki_url": "",
+    "category": "Object",
 }
 
 import bpy
@@ -59,11 +57,11 @@ class OBJECT_OT_add_noise(bpy.types.Operator):
         return {'FINISHED'}
 
 class OBJECT_PT_noise_generator(bpy.types.Panel):
-    bl_idname = "MCG Uncertainty Basic"
     bl_label = "MCG Uncertainty Basic"
+    bl_idname = "OBJECT_PT_uncertainty_basic"
     bl_space_type = "VIEW_3D"   
     bl_region_type = "UI"  # This should be 'UI' for the sidebar
-    bl_category = "MCG Uncertainty Basic"  # The name of the tab in the sidebar
+    bl_category = "MCG Uncertainty"  # The name of the tab in the sidebar
 
     def draw(self, context):
         layout = self.layout
@@ -74,6 +72,12 @@ class OBJECT_PT_noise_generator(bpy.types.Panel):
         layout.prop(ng_tool, "std_dev")
         layout.operator("object.add_noise")
 
+classes = (
+    NoiseGeneratorProperties,
+    OBJECT_OT_add_noise,
+    OBJECT_PT_noise_generator,
+)
+
 def register():
     bpy.utils.register_class(NoiseGeneratorProperties)
     bpy.utils.register_class(OBJECT_OT_add_noise)
@@ -81,10 +85,13 @@ def register():
     bpy.types.Scene.ng_tool = bpy.props.PointerProperty(type=NoiseGeneratorProperties)
 
 def unregister():
-    bpy.utils.unregister_class(NoiseGeneratorProperties)
-    bpy.utils.unregister_class(OBJECT_OT_add_noise)
-    bpy.utils.unregister_class(OBJECT_PT_noise_generator)
+    if OBJECT_PT_noise_generator.is_registered:
+        bpy.utils.unregister_class(OBJECT_PT_noise_generator)
+    if OBJECT_OT_add_noise.is_registered:
+        bpy.utils.unregister_class(OBJECT_OT_add_noise)
+    if NoiseGeneratorProperties.is_registered:
+        bpy.utils.unregister_class(NoiseGeneratorProperties)
     del bpy.types.Scene.ng_tool
 
-if __name__ == "__main__":
-    register()
+# if __name__ == "__main__":
+#     register()
